@@ -28,9 +28,9 @@ const TRUST_BENEFITS = [
 
 export default function TrustStrip() {
   return (
-    <section className="bg-[#FAF7F2] border-b border-espresso/10 py-6 sm:py-8">
+    <section className="bg-[#FDFBF8] border-b border-[#F2D8CB] py-6 sm:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-espresso/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-[#F2D8CB]">
           {TRUST_BENEFITS.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -40,14 +40,14 @@ export default function TrustStrip() {
                   idx !== 0 ? "pt-4 md:pt-0 md:pl-6" : ""
                 }`}
               >
-                <div className="w-10 h-10 rounded-full bg-white border border-espresso/10 flex items-center justify-center text-espresso flex-shrink-0 shadow-soft">
-                  <Icon className="w-5 h-5 stroke-[1.5]" />
+                <div className="w-11 h-11 rounded-full bg-[#FBE7DE] border border-[#F2D8CB] flex items-center justify-center text-[#DD592A] flex-shrink-0 shadow-sm">
+                  <Icon className="w-5 h-5 stroke-[2]" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-espresso font-sans">
+                  <h4 className="text-xs font-bold text-espresso font-heading tracking-wide">
                     {item.title}
                   </h4>
-                  <p className="text-[11px] text-taupe-muted">
+                  <p className="text-[11px] text-[#6B6B66] font-medium">
                     {item.subtitle}
                   </p>
                 </div>

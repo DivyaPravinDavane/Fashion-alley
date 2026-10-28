@@ -13,24 +13,24 @@ export default function Hero() {
           {/* Left Column: Expressive Editorial Copy */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-6 sm:space-y-7 z-10">
             <div className="space-y-3">
-              <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-semibold text-espresso/70">
-                The Accessories Edit
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FBE7DE] text-[#DD592A] rounded-full uppercase tracking-wider text-[10px] sm:text-[11px] font-extrabold border border-[#F2D8CB]">
+                ✨ Trendy Hair Essentials
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-espresso font-normal leading-[1.08] tracking-tight">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-espresso font-extrabold leading-[1.08] tracking-tight">
                 Little Details.
                 <br />
-                <span className="italic font-normal">Beautifully You.</span>
+                <span className="text-[#DD592A]">Beautifully You.</span>
               </h1>
             </div>
 
-            <p className="text-xs sm:text-sm text-charcoal/80 leading-relaxed max-w-md font-sans">
-              Discover beautiful finishing touches for everyday styling, special occasions, and thoughtful gifting. Crafted for effortless grace and gentle holds.
+            <p className="text-xs sm:text-sm text-[#6B6B66] leading-relaxed max-w-md font-medium">
+              Discover aesthetic finishing touches for everyday styling, date nights, and thoughtful gifting. Designed for effortless chic and damage-free hold.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1">
               <Link
                 href="/shop"
-                className="py-3 px-6 bg-espresso hover:bg-espresso-light text-white text-xs uppercase tracking-[0.16em] font-semibold rounded transition-all duration-300 flex items-center justify-center gap-2 shadow-soft hover:shadow-luxury group"
+                className="py-3.5 px-6 bg-[#DD592A] hover:bg-[#C74718] text-white text-xs uppercase tracking-wider font-bold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-salty hover:shadow-lg hover:-translate-y-0.5 group"
               >
                 <span>Explore The Collection</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -38,7 +38,7 @@ export default function Hero() {
 
               <Link
                 href="/collections/hair-claws"
-                className="py-3 px-6 bg-white hover:bg-[#F3ECE4] text-espresso border border-espresso/20 text-xs uppercase tracking-[0.16em] font-semibold rounded transition-all duration-300 text-center shadow-soft"
+                className="py-3.5 px-6 bg-white hover:bg-[#FBE7DE] text-[#DD592A] border-2 border-[#DD592A] text-xs uppercase tracking-wider font-bold rounded-xl transition-all duration-300 text-center shadow-sm"
               >
                 Shop New Arrivals
               </Link>

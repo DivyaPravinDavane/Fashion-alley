@@ -20,13 +20,13 @@ export default function WholesaleSection() {
   };
 
   return (
-    <section className="bg-[#FAF7F2] py-12 sm:py-16 border-b border-espresso/10">
+    <section className="bg-[#FDFBF8] py-12 sm:py-16 border-b border-[#F2D8CB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#F6EFE6] rounded-2xl border border-[#E8D8C5] p-6 sm:p-8 lg:p-10 shadow-soft">
+        <div className="bg-[#FDF1EB] rounded-2xl border border-[#F2D8CB] p-6 sm:p-8 lg:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left: Custom Wholesale Flatlay Banner */}
             <div className="lg:col-span-3">
-              <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-soft border border-espresso/10 bg-white">
+              <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-sm border border-[#F2D8CB] bg-white">
                 <Image
                   src="/images/banners/wholesale_flatlay_tray.jpg"
                   alt="Wholesale boutique hair accessories collection"
@@ -39,29 +39,29 @@ export default function WholesaleSection() {
             {/* Center: Copy & Pack Sizes */}
             <div className="lg:col-span-5 space-y-4">
               <div>
-                <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-espresso/70 block mb-1">
-                  Wholesale Shopping
+                <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#DD592A] block mb-1">
+                  📦 Wholesale Shopping
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl text-espresso font-normal leading-tight">
-                  Beautiful Accessories.
+                <h2 className="font-heading text-2xl sm:text-3xl text-espresso font-extrabold leading-tight">
+                  Trendy Accessories.
                   <br />
                   Better Bulk Buying.
                 </h2>
               </div>
 
-              <p className="text-xs text-charcoal/80 leading-relaxed font-sans">
+              <p className="text-xs text-[#6B6B66] leading-relaxed font-medium">
                 Explore our wholesale range with attractive pack sizes and exclusive pricing for bulk orders. Directly sourcing from Fashion Alley ensures verified high-gloss acrylic finishes and prompt dispatch.
               </p>
 
               <div>
-                <span className="text-[11px] uppercase tracking-wider font-semibold text-espresso/70 block mb-2">
+                <span className="text-[11px] uppercase tracking-wider font-bold text-espresso/80 block mb-2">
                   Popular Pack Sizes
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {["Pack of 12", "Pack of 24", "Pack of 48", "Pack of 100+"].map((size) => (
                     <span
                       key={size}
-                      className="text-xs px-3 py-1 bg-white border border-[#E8D8C5] rounded-full text-espresso font-medium shadow-sm"
+                      className="text-xs px-3.5 py-1 bg-white border border-[#F2D8CB] rounded-full text-espresso font-bold shadow-sm hover:border-[#DD592A] hover:text-[#DD592A] transition-colors"
                     >
                       {size}
                     </span>
@@ -72,7 +72,7 @@ export default function WholesaleSection() {
               <div className="pt-2">
                 <Link
                   href="/shop?wholesale=true"
-                  className="inline-flex items-center gap-2 py-2.5 px-5 bg-espresso text-white rounded text-xs uppercase tracking-wider font-semibold hover:bg-espresso-light transition-all shadow-soft"
+                  className="inline-flex items-center gap-2 py-3 px-6 bg-[#DD592A] text-white rounded-xl text-xs uppercase tracking-wider font-bold hover:bg-[#C74718] transition-all shadow-salty"
                 >
                   <span>Browse Bulk Packs</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -81,11 +81,11 @@ export default function WholesaleSection() {
             </div>
 
             {/* Right: Wholesale Enquiry Form */}
-            <div className="lg:col-span-4 bg-white rounded-xl p-5 border border-[#E8D8C5] shadow-soft">
-              <h3 className="font-serif text-base text-espresso font-medium mb-1">
+            <div className="lg:col-span-4 bg-white rounded-xl p-6 border border-[#F2D8CB] shadow-sm">
+              <h3 className="font-heading text-base text-espresso font-bold mb-1">
                 Wholesale Enquiry (Demo)
               </h3>
-              <p className="text-[11px] text-taupe-muted mb-4">
+              <p className="text-[11px] text-[#6B6B66] mb-4">
                 Receive our wholesale catalog and direct pricing sheet.
               </p>
 
@@ -110,7 +110,7 @@ export default function WholesaleSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full text-xs p-2.5 rounded border border-espresso/15 bg-[#FAF7F2] text-espresso placeholder:text-espresso/40 focus:border-espresso outline-none"
+                      className="w-full text-xs p-3 rounded-lg border border-[#F2D8CB] bg-[#FDFBF8] text-espresso placeholder:text-espresso/40 focus:border-[#DD592A] outline-none"
                     />
                   </div>
                   <div>
@@ -122,7 +122,7 @@ export default function WholesaleSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full text-xs p-2.5 rounded border border-espresso/15 bg-[#FAF7F2] text-espresso placeholder:text-espresso/40 focus:border-espresso outline-none"
+                      className="w-full text-xs p-3 rounded-lg border border-[#F2D8CB] bg-[#FDFBF8] text-espresso placeholder:text-espresso/40 focus:border-[#DD592A] outline-none"
                     />
                   </div>
                   <div>
@@ -133,16 +133,16 @@ export default function WholesaleSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full text-xs p-2.5 rounded border border-espresso/15 bg-[#FAF7F2] text-espresso placeholder:text-espresso/40 focus:border-espresso outline-none resize-none"
+                      className="w-full text-xs p-3 rounded-lg border border-[#F2D8CB] bg-[#FDFBF8] text-espresso placeholder:text-espresso/40 focus:border-[#DD592A] outline-none resize-none"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-2.5 px-4 bg-espresso text-white rounded text-xs uppercase tracking-wider font-semibold hover:bg-espresso-light transition-all shadow-sm"
+                    className="w-full py-3 px-4 bg-[#DD592A] text-white rounded-lg text-xs uppercase tracking-wider font-bold hover:bg-[#C74718] transition-all shadow-salty"
                   >
                     Submit (Demo)
                   </button>
-                  <p className="text-[10px] text-center text-taupe-muted">
+                  <p className="text-[10px] text-center text-[#6B6B66]">
                     No backend submission • Demonstration form
                   </p>
                 </form>

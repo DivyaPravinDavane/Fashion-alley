@@ -18,15 +18,15 @@ export default function Bestsellers() {
   };
 
   return (
-    <section className="bg-[#FAF7F2] py-12 sm:py-16 border-b border-espresso/10">
+    <section className="bg-[#FDFBF8] py-12 sm:py-16 border-b border-[#F2D8CB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-end justify-between mb-8">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-espresso/60 block mb-1">
-              Bestsellers
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#DD592A] block mb-1">
+              🔥 Most Popular
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-espresso font-normal">
+            <h2 className="font-heading text-3xl sm:text-4xl text-espresso font-extrabold">
               The Pieces Everyone Loves
             </h2>
           </div>
@@ -35,14 +35,14 @@ export default function Bestsellers() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => scroll("left")}
-              className="w-9 h-9 rounded-full bg-white border border-espresso/15 flex items-center justify-center text-espresso hover:bg-espresso hover:text-white transition-colors shadow-soft"
+              className="w-9 h-9 rounded-full bg-white border border-[#F2D8CB] flex items-center justify-center text-espresso hover:bg-[#DD592A] hover:text-white hover:border-[#DD592A] transition-colors shadow-sm"
               aria-label="Previous bestsellers"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="w-9 h-9 rounded-full bg-white border border-espresso/15 flex items-center justify-center text-espresso hover:bg-espresso hover:text-white transition-colors shadow-soft"
+              className="w-9 h-9 rounded-full bg-white border border-[#F2D8CB] flex items-center justify-center text-espresso hover:bg-[#DD592A] hover:text-white hover:border-[#DD592A] transition-colors shadow-sm"
               aria-label="Next bestsellers"
             >
               <ChevronRight className="w-4 h-4" />

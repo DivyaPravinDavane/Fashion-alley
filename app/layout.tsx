@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
@@ -9,10 +9,10 @@ import Footer from "@/components/layout/Footer";
 import CartDrawer from "@/components/cart/CartDrawer";
 import ProductQuickView from "@/components/products/ProductQuickView";
 
-const cormorant = Cormorant_Garamond({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -57,8 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#FAF7F2] text-espresso antialiased">
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable}`}>
+      <body className="min-h-screen flex flex-col bg-[#FDFBF8] text-espresso antialiased">
         <CartProvider>
           <WishlistProvider>
             <QuickViewProvider>

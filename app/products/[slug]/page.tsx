@@ -245,15 +245,15 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
             </div>
 
             {/* CTAs */}
-            <div className="space-y-3 pt-6 border-t border-espresso/10">
+            <div className="space-y-3 pt-6 border-t border-[#F2D8CB]">
               <div className="flex gap-3">
                 <button
                   onClick={handleAddToCart}
-                  className="flex-1 py-3.5 px-6 bg-espresso text-white rounded-lg text-xs uppercase tracking-widest font-semibold hover:bg-espresso-light transition-all flex items-center justify-center gap-2 shadow-soft active:scale-[0.99]"
+                  className="flex-1 py-3.5 px-6 bg-[#DD592A] hover:bg-[#C74718] text-white rounded-xl text-xs uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2 shadow-salty active:scale-[0.99]"
                 >
                   {addedNotice ? (
                     <>
-                      <Check className="w-4 h-4 text-emerald-400" />
+                      <Check className="w-4 h-4 text-white stroke-[2.5]" />
                       <span>Added to Bag!</span>
                     </>
                   ) : (
@@ -266,22 +266,22 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 
                 <button
                   onClick={() => toggleWishlist(product)}
-                  className={`p-3.5 rounded-lg border transition-colors flex items-center justify-center ${
+                  className={`p-3.5 rounded-xl border transition-colors flex items-center justify-center ${
                     isFavorited
-                      ? "border-rose-dusty bg-blush-light text-rose-deep"
-                      : "border-espresso/20 bg-white text-espresso hover:border-espresso"
+                      ? "border-[#DD592A] bg-[#FBE7DE] text-[#DD592A]"
+                      : "border-[#F2D8CB] bg-white text-espresso hover:border-[#DD592A]"
                   }`}
                   aria-label="Toggle wishlist"
                 >
-                  <Heart className={`w-5 h-5 ${isFavorited ? "fill-current" : ""}`} />
+                  <Heart className={`w-5 h-5 ${isFavorited ? "fill-[#DD592A]" : ""}`} />
                 </button>
               </div>
 
               <button
                 onClick={handleBuyNow}
-                className="w-full py-3.5 px-6 bg-[#F0DDE0] text-espresso border border-[#D5A1AB] rounded-lg text-xs uppercase tracking-widest font-semibold hover:bg-[#E8CCD1] transition-all flex items-center justify-center gap-2 shadow-soft active:scale-[0.99]"
+                className="w-full py-3.5 px-6 bg-[#FBE7DE] hover:bg-[#F8D5C6] text-[#DD592A] border border-[#F2D8CB] rounded-xl text-xs uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2"
               >
-                <span>Buy Now (Demo Checkout)</span>
+                <span>Instant Checkout</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 

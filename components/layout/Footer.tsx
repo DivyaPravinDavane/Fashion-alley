@@ -16,21 +16,21 @@ import { STORE_CONTACT, TOP_NAV_CATEGORIES } from "@/data/navigation";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#241A17] text-[#FAF7F2] border-t border-espresso/20">
+    <footer className="bg-[#1D1D1B] text-[#FAF7F2] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <div>
-              <span className="font-serif text-2xl tracking-[0.16em] text-[#FAF7F2] uppercase font-normal block">
+              <span className="font-heading text-2xl tracking-[0.14em] text-white uppercase font-extrabold block">
                 Fashion Alley
               </span>
-              <span className="text-[9px] tracking-[0.3em] text-[#D5A1AB] uppercase block font-sans mt-0.5">
+              <span className="text-[9px] tracking-[0.3em] text-[#DD592A] uppercase block font-sans mt-0.5 font-bold">
                 Hair Accessories | Style | You
               </span>
             </div>
 
-            <p className="text-xs text-[#FAF7F2]/70 leading-relaxed max-w-sm">
+            <p className="text-xs text-white/70 leading-relaxed max-w-sm">
               India&apos;s premier destination for fine fashion accessories, French acetate hair claws, mulberry silk scrunchies, and boutique wholesale collections. Handcrafted for elegance and effortless everyday styling.
             </p>
 
@@ -39,7 +39,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#FAF7F2]/80 hover:text-white hover:border-white transition-colors"
+                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:bg-[#DD592A] hover:border-[#DD592A] transition-all"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -48,7 +48,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#FAF7F2]/80 hover:text-white hover:border-white transition-colors"
+                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:bg-[#DD592A] hover:border-[#DD592A] transition-all"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -57,7 +57,7 @@ export default function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#FAF7F2]/80 hover:text-white hover:border-white transition-colors"
+                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:bg-[#DD592A] hover:border-[#DD592A] transition-all"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
@@ -65,8 +65,8 @@ export default function Footer() {
             </div>
 
             <div className="pt-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] text-[#E8D8C5]">
-                <Sparkles className="w-3.5 h-3.5 text-champagne" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] text-[#FBE7DE]">
+                <Sparkles className="w-3.5 h-3.5 text-[#DD592A]" />
                 <span>Pan-India Wholesale Bulk Dispatches</span>
               </div>
             </div>
@@ -74,15 +74,15 @@ export default function Footer() {
 
           {/* Categories Column */}
           <div>
-            <h4 className="font-serif text-sm uppercase tracking-wider text-[#FAF7F2] font-medium mb-4">
+            <h4 className="font-heading text-sm uppercase tracking-wider text-white font-bold mb-4">
               Shop Categories
             </h4>
-            <ul className="space-y-2 text-xs text-[#FAF7F2]/70">
+            <ul className="space-y-2 text-xs text-white/70">
               {TOP_NAV_CATEGORIES.slice(0, 8).map((cat) => (
                 <li key={cat.href}>
                   <Link
                     href={cat.href}
-                    className="hover:text-white hover:underline transition-colors"
+                    className="hover:text-[#DD592A] transition-colors"
                   >
                     {cat.name}
                   </Link>
@@ -91,7 +91,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/shop"
-                  className="text-[#D5A1AB] font-semibold hover:underline"
+                  className="text-[#DD592A] font-bold hover:underline"
                 >
                   View All Categories →
                 </Link>

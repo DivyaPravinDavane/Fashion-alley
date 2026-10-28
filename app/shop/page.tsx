@@ -81,42 +81,42 @@ function ShopContent() {
   };
 
   return (
-    <div className="bg-[#FAF7F2] min-h-screen py-8 sm:py-12 border-b border-espresso/10">
+    <div className="bg-[#FDFBF8] min-h-screen py-8 sm:py-12 border-b border-[#F2D8CB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
-        <nav className="text-xs text-taupe-muted mb-4 flex items-center gap-2">
-          <Link href="/" className="hover:text-espresso transition-colors">
+        <nav className="text-xs text-[#6B6B66] mb-4 flex items-center gap-2 font-medium">
+          <Link href="/" className="hover:text-[#DD592A] transition-colors">
             Home
           </Link>
           <span>/</span>
-          <span className="text-espresso font-medium">Boutique Catalogue</span>
+          <span className="text-espresso font-bold">Catalogue</span>
         </nav>
 
         {/* Page Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between pb-8 mb-8 border-b border-espresso/10 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between pb-8 mb-8 border-b border-[#F2D8CB] gap-4">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-espresso/60 block mb-1">
-              Curated Hair Accessories
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#DD592A] block mb-1">
+              ✨ Curated Accessories
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl text-espresso font-normal">
+            <h1 className="font-heading text-3xl sm:text-5xl text-espresso font-extrabold">
               {selectedCategory !== "all"
                 ? CATEGORIES.find((c) => c.slug === selectedCategory)?.name || "Collection"
                 : "The Complete Catalogue"}
             </h1>
-            <p className="text-xs sm:text-sm text-charcoal/70 mt-2 max-w-xl">
+            <p className="text-xs sm:text-sm text-[#6B6B66] mt-2 max-w-xl font-medium">
               Hand-finished french hair claws, mulberry silk scrunchies, pearl hair pins, and salon bulk packs. Every piece thoughtfully designed for gentle holds and timeless beauty.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="text-xs text-taupe-muted whitespace-nowrap">
+            <span className="text-xs text-[#6B6B66] font-medium whitespace-nowrap">
               Showing <strong>{filteredProducts.length}</strong> items
             </span>
             <button
               onClick={() => setIsMobileFilterOpen(true)}
-              className="lg:hidden flex items-center gap-1.5 py-2 px-3.5 bg-white border border-espresso/15 rounded-lg text-xs font-semibold text-espresso shadow-soft"
+              className="lg:hidden flex items-center gap-1.5 py-2 px-3.5 bg-white border border-[#F2D8CB] rounded-lg text-xs font-bold text-espresso shadow-sm"
             >
-              <Filter className="w-3.5 h-3.5" />
+              <Filter className="w-3.5 h-3.5 text-[#DD592A]" />
               <span>Filters {activeFilterCount > 0 && `(${activeFilterCount})`}</span>
             </button>
           </div>
@@ -124,12 +124,12 @@ function ShopContent() {
 
         {/* Active Filters Bar */}
         {activeFilterCount > 0 && (
-          <div className="flex flex-wrap items-center gap-2 mb-6 p-3 bg-white rounded-xl border border-espresso/10 shadow-soft">
-            <span className="text-xs font-semibold text-espresso mr-1">
+          <div className="flex flex-wrap items-center gap-2 mb-6 p-3.5 bg-[#FDF1EB] rounded-xl border border-[#F2D8CB]">
+            <span className="text-xs font-bold text-espresso mr-1">
               Active Filters:
             </span>
             {selectedCategory !== "all" && (
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-champagne-light rounded-full text-espresso font-medium">
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-white border border-[#F2D8CB] rounded-full text-[#DD592A] font-bold shadow-sm">
                 {CATEGORIES.find((c) => c.slug === selectedCategory)?.name}
                 <button onClick={() => setSelectedCategory("all")}>
                   <X className="w-3 h-3 hover:text-red-600" />
@@ -137,7 +137,7 @@ function ShopContent() {
               </span>
             )}
             {selectedPriceRange !== "all" && (
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-champagne-light rounded-full text-espresso font-medium">
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-white border border-[#F2D8CB] rounded-full text-[#DD592A] font-bold shadow-sm">
                 {selectedPriceRange === "under300"
                   ? "Under ₹300"
                   : selectedPriceRange === "300to500"
@@ -149,7 +149,7 @@ function ShopContent() {
               </span>
             )}
             {selectedPackFilter !== "all" && (
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-champagne-light rounded-full text-espresso font-medium">
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-white border border-[#F2D8CB] rounded-full text-[#DD592A] font-bold shadow-sm">
                 {selectedPackFilter === "pack" ? "Bulk / Multi-Packs" : "Single Pieces"}
                 <button onClick={() => setSelectedPackFilter("all")}>
                   <X className="w-3 h-3 hover:text-red-600" />
@@ -157,7 +157,7 @@ function ShopContent() {
               </span>
             )}
             {inStockOnly && (
-              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-champagne-light rounded-full text-espresso font-medium">
+              <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 bg-white border border-[#F2D8CB] rounded-full text-[#DD592A] font-bold shadow-sm">
                 In Stock Only
                 <button onClick={() => setInStockOnly(false)}>
                   <X className="w-3 h-3 hover:text-red-600" />
@@ -166,7 +166,7 @@ function ShopContent() {
             )}
             <button
               onClick={clearAllFilters}
-              className="text-xs text-rose-deep font-semibold hover:underline ml-auto"
+              className="text-xs text-[#DD592A] font-bold hover:underline ml-auto"
             >
               Clear All
             </button>
@@ -203,10 +203,10 @@ function ShopContent() {
               <div className="space-y-1 max-h-64 overflow-y-auto pr-1">
                 <button
                   onClick={() => setSelectedCategory("all")}
-                  className={`w-full text-left text-xs py-1.5 px-2 rounded-md transition-colors flex items-center justify-between ${
+                  className={`w-full text-left text-xs py-1.5 px-2.5 rounded-lg transition-colors flex items-center justify-between ${
                     selectedCategory === "all"
-                      ? "bg-espresso text-white font-medium"
-                      : "text-espresso/80 hover:bg-[#FAF7F2]"
+                      ? "bg-[#DD592A] text-white font-bold shadow-sm"
+                      : "text-espresso/80 hover:bg-[#FDF1EB] hover:text-[#DD592A]"
                   }`}
                 >
                   <span>All Categories</span>
@@ -218,14 +218,14 @@ function ShopContent() {
                     <button
                       key={cat.id}
                       onClick={() => setSelectedCategory(cat.slug)}
-                      className={`w-full text-left text-xs py-1.5 px-2 rounded-md transition-colors flex items-center justify-between ${
+                      className={`w-full text-left text-xs py-1.5 px-2.5 rounded-lg transition-colors flex items-center justify-between ${
                         selectedCategory === cat.slug
-                          ? "bg-espresso text-white font-medium"
-                          : "text-espresso/80 hover:bg-[#FAF7F2]"
+                          ? "bg-[#DD592A] text-white font-bold shadow-sm"
+                          : "text-espresso/80 hover:bg-[#FDF1EB] hover:text-[#DD592A]"
                       }`}
                     >
                       <span className="truncate">{cat.name}</span>
-                      <span className="text-[11px] opacity-60">{count}</span>
+                      <span className="text-[11px] opacity-75">{count}</span>
                     </button>
                   );
                 })}

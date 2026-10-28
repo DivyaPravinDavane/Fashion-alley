@@ -196,11 +196,11 @@ export default function ProductQuickView() {
             <div className="flex gap-2">
               <button
                 onClick={handleAddToCart}
-                className="flex-1 py-3 px-4 bg-espresso text-white rounded text-xs uppercase tracking-wider font-semibold hover:bg-espresso-light transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
+                className="flex-1 py-3 px-4 bg-[#DD592A] hover:bg-[#C74718] text-white rounded-xl text-xs uppercase tracking-wider font-bold transition-all flex items-center justify-center gap-2 shadow-salty active:scale-[0.98]"
               >
                 {addedNotice ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-white stroke-[2.5]" />
                     <span>Added to Bag!</span>
                   </>
                 ) : (
@@ -213,22 +213,22 @@ export default function ProductQuickView() {
 
               <button
                 onClick={() => toggleWishlist(activeProduct)}
-                className={`p-3 rounded border transition-colors flex items-center justify-center ${
+                className={`p-3 rounded-xl border transition-colors flex items-center justify-center ${
                   isFavorited
-                    ? "border-rose-dusty bg-blush-light text-rose-deep"
-                    : "border-espresso/20 bg-white text-espresso hover:border-espresso"
+                    ? "border-[#DD592A] bg-[#FBE7DE] text-[#DD592A]"
+                    : "border-[#F2D8CB] bg-white text-espresso hover:border-[#DD592A] hover:text-[#DD592A]"
                 }`}
                 aria-label="Wishlist"
               >
-                <Heart className={`w-4 h-4 ${isFavorited ? "fill-current" : ""}`} />
+                <Heart className={`w-4 h-4 ${isFavorited ? "fill-[#DD592A]" : ""}`} />
               </button>
             </div>
 
             <button
               onClick={handleBuyNow}
-              className="w-full py-3 px-4 bg-[#F0DDE0] text-espresso border border-[#D5A1AB] rounded text-xs uppercase tracking-wider font-semibold hover:bg-[#E8CCD1] transition-all flex items-center justify-center gap-2"
+              className="w-full py-3 px-4 bg-[#FBE7DE] text-[#DD592A] border border-[#F2D8CB] rounded-xl text-xs uppercase tracking-wider font-bold hover:bg-[#F8D5C6] transition-all flex items-center justify-center gap-2"
             >
-              <span>Buy Now (Demo Checkout)</span>
+              <span>Buy Now (Instant Checkout)</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -236,7 +236,7 @@ export default function ProductQuickView() {
               <Link
                 href={`/products/${activeProduct.slug}`}
                 onClick={closeQuickView}
-                className="text-xs text-taupe-muted hover:text-espresso underline underline-offset-4"
+                className="text-xs text-[#6B6B66] hover:text-[#DD592A] font-bold underline underline-offset-4"
               >
                 View full product specifications & reviews →
               </Link>

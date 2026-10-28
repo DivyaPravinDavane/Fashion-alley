@@ -491,18 +491,18 @@ export default function CheckoutPage() {
                     {deliveryCost === 0 ? "FREE" : formatPrice(deliveryCost)}
                   </span>
                 </div>
-                <div className="border-t border-espresso/10 pt-3 flex justify-between text-base font-semibold text-espresso">
+                <div className="border-t border-espresso/10 pt-3 flex justify-between text-base font-extrabold text-espresso">
                   <span>Total Amount</span>
-                  <span>{formatPrice(finalTotal)}</span>
+                  <span className="text-lg text-[#DD592A]">{formatPrice(finalTotal)}</span>
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 bg-espresso hover:bg-espresso-light text-white rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99]"
+                className="w-full py-4 px-6 bg-[#DD592A] hover:bg-[#C74718] text-white rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all shadow-salty active:scale-[0.99]"
               >
                 <Lock className="w-4 h-4" />
-                <span>Place Demo Order ({formatPrice(finalTotal)})</span>
+                <span>Place Order ({formatPrice(finalTotal)})</span>
               </button>
 
               <div className="p-3 rounded-lg bg-[#FAF7F2] border border-espresso/10 text-[11px] text-taupe-muted text-center space-y-1">

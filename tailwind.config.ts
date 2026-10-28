@@ -9,55 +9,79 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Salty signature vibrant orange & warm peach tints
+        orange: {
+          DEFAULT: "#DD592A",
+          hover: "#C74718",
+          dark: "#B83E12",
+          light: "#FBE7DE",
+          soft: "#FFF6F2",
+          border: "#F2D8CB",
+        },
+        salty: {
+          DEFAULT: "#DD592A",
+          orange: "#DD592A",
+          hover: "#C74718",
+          dark: "#B83E12",
+          peach: "#FBE7DE",
+          cream: "#FDF6E8",
+          charcoal: "#2B2B2B",
+          muted: "#6B6B66",
+        },
         background: {
-          DEFAULT: "#FAF7F2",
-          secondary: "#FFFDFC",
-          cream: "#F7F3EC",
+          DEFAULT: "#FDFBF8",
+          secondary: "#FFFDFB",
+          cream: "#FDF6E8",
+          peach: "#FBE7DE",
           card: "#FFFFFF",
         },
-        blush: {
-          light: "#FBF3F4",
-          DEFAULT: "#F0DDE0",
-          medium: "#E5C8CD",
-        },
-        rose: {
-          dusty: "#D5A1AB",
-          deep: "#B87584",
-        },
-        champagne: {
-          light: "#F6EFE6",
-          DEFAULT: "#E8D8C5",
-          dark: "#CDBAA3",
-        },
+        // Salty UI font shade & contrast tones
         espresso: {
-          DEFAULT: "#30231F",
-          dark: "#201714",
-          light: "#4A3934",
+          DEFAULT: "#2B2B2B",
+          dark: "#1D1D1D",
+          light: "#444441",
         },
         charcoal: {
-          DEFAULT: "#292725",
-          light: "#423E3A",
-          muted: "#6B6560",
+          DEFAULT: "#2B2B2B",
+          light: "#444441",
+          muted: "#6B6B66",
+        },
+        // Mapped warm peach / Salty accent tones
+        blush: {
+          light: "#FFF7F2",
+          DEFAULT: "#FBE7DE",
+          medium: "#F5D4C4",
+        },
+        rose: {
+          dusty: "#DD592A",
+          deep: "#C74718",
+        },
+        champagne: {
+          light: "#FFFDFB",
+          DEFAULT: "#FDF6E8",
+          dark: "#EEDCC5",
         },
         gold: {
-          DEFAULT: "#B89A68",
-          light: "#D4BC91",
-          dark: "#987A49",
+          DEFAULT: "#DD592A",
+          light: "#F5A17E",
+          dark: "#C74718",
         },
         taupe: {
-          DEFAULT: "#A99B8C",
-          light: "#C5B9AC",
-          muted: "#8E8172",
+          DEFAULT: "#8C827A",
+          light: "#EAD9CF",
+          muted: "#A59C94",
         },
       },
       fontFamily: {
-        serif: ["var(--font-cormorant)", "Cormorant Garamond", "Playfair Display", "Georgia", "serif"],
-        sans: ["var(--font-inter)", "Inter", "Manrope", "sans-serif"],
+        heading: ["var(--font-heading)", "Plus Jakarta Sans", "Inter", "sans-serif"],
+        serif: ["var(--font-heading)", "Plus Jakarta Sans", "Inter", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
       },
       animation: {
-        "fade-in": "fadeIn 0.5s ease-in-out forwards",
+        "fade-in": "fadeIn 0.4s ease-out forwards",
         "slide-down": "slideDown 0.3s ease-out forwards",
         "pulse-subtle": "pulseSubtle 2.5s infinite ease-in-out",
+        "marquee": "marquee 25s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -70,13 +94,18 @@ const config: Config = {
         },
         pulseSubtle: {
           "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.8" },
+          "50%": { opacity: "0.85" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       boxShadow: {
-        soft: "0 4px 20px -2px rgba(48, 35, 31, 0.05)",
-        luxury: "0 10px 30px -4px rgba(48, 35, 31, 0.08)",
-        floating: "0 20px 40px -6px rgba(48, 35, 31, 0.12)",
+        soft: "0 4px 20px -2px rgba(221, 89, 42, 0.06)",
+        luxury: "0 10px 30px -4px rgba(43, 43, 43, 0.08)",
+        floating: "0 20px 40px -6px rgba(221, 89, 42, 0.15)",
+        salty: "0 8px 24px -4px rgba(221, 89, 42, 0.22)",
       },
     },
   },

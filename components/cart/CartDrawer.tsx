@@ -79,9 +79,9 @@ export default function CartDrawer() {
               </span>
               <span>{progressPercent}%</span>
             </div>
-            <div className="w-full bg-[#E5D5C2] h-1.5 rounded-full overflow-hidden">
+            <div className="w-full bg-[#F2D8CB] h-2 rounded-full overflow-hidden">
               <div
-                className="bg-espresso h-full transition-all duration-500 rounded-full"
+                className="bg-[#DD592A] h-full transition-all duration-500 rounded-full"
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
@@ -218,7 +218,7 @@ export default function CartDrawer() {
                 <Link
                   href="/checkout"
                   onClick={closeCart}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 bg-espresso text-white rounded text-xs uppercase tracking-widest font-semibold hover:bg-espresso-light transition-all shadow-md active:scale-[0.99]"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 bg-[#DD592A] hover:bg-[#C74718] text-white rounded-xl text-xs uppercase tracking-wider font-bold transition-all shadow-salty active:scale-[0.99]"
                 >
                   <span>Proceed to Checkout</span>
                   <ArrowRight className="w-4 h-4" />
@@ -226,7 +226,7 @@ export default function CartDrawer() {
 
                 <button
                   onClick={closeCart}
-                  className="w-full text-center py-2 text-xs text-taupe-muted hover:text-espresso font-medium transition-colors"
+                  className="w-full text-center py-2 text-xs text-[#6B6B66] hover:text-[#DD592A] font-bold transition-colors"
                 >
                   Continue Browsing
                 </button>

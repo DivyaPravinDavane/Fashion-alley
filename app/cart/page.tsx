@@ -223,7 +223,7 @@ export default function CartPage() {
                 />
                 <button
                   type="submit"
-                  className="py-2.5 px-4 bg-espresso text-white rounded-lg text-xs uppercase font-semibold hover:bg-espresso-light transition-all flex-shrink-0"
+                  className="py-2.5 px-4 bg-[#DD592A] text-white rounded-lg text-xs uppercase font-bold hover:bg-[#C74718] transition-all flex-shrink-0 shadow-sm"
                 >
                   Apply
                 </button>
@@ -254,17 +254,17 @@ export default function CartPage() {
               )}
               <div className="flex justify-between text-espresso/70">
                 <span>Estimated Shipping</span>
-                <span>{shipping === 0 ? "FREE" : formatPrice(shipping)}</span>
+                <span className="font-bold text-emerald-600">{shipping === 0 ? "FREE" : formatPrice(shipping)}</span>
               </div>
-              <div className="border-t border-espresso/10 pt-3 flex justify-between text-base font-semibold text-espresso">
+              <div className="border-t border-espresso/10 pt-3 flex justify-between text-base font-extrabold text-espresso">
                 <span>Estimated Total</span>
-                <span>{formatPrice(finalTotal)}</span>
+                <span className="text-lg text-[#DD592A]">{formatPrice(finalTotal)}</span>
               </div>
             </div>
 
             <Link
               href="/checkout"
-              className="w-full py-4 px-6 bg-espresso hover:bg-espresso-light text-white rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.99]"
+              className="w-full py-4 px-6 bg-[#DD592A] hover:bg-[#C74718] text-white rounded-xl text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all shadow-salty active:scale-[0.99]"
             >
               <span>Proceed to Checkout</span>
               <ArrowRight className="w-4 h-4" />

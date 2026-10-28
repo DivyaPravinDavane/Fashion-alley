@@ -44,14 +44,14 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 bg-black/40 backdrop-blur-sm animate-fade-in px-4">
       <div className="bg-[#FAF7F2] w-full max-w-2xl rounded-2xl shadow-floating border border-espresso/10 overflow-hidden flex flex-col max-h-[80vh]">
         {/* Search Input Bar */}
-        <div className="p-4 sm:p-5 border-b border-espresso/10 flex items-center gap-3 bg-white">
-          <Search className="w-5 h-5 text-espresso/60 flex-shrink-0" />
+        <div className="p-4 sm:p-5 border-b border-[#F2D8CB] flex items-center gap-3 bg-white">
+          <Search className="w-5 h-5 text-[#DD592A] flex-shrink-0" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search hair claws, scrunchies, pearl pins, combos..."
-            className="w-full bg-transparent text-espresso placeholder:text-espresso/40 outline-none text-base"
+            className="w-full bg-transparent text-espresso placeholder:text-espresso/40 outline-none text-base font-medium"
             autoFocus
           />
           {query && (
@@ -64,7 +64,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           )}
           <button
             onClick={onClose}
-            className="text-xs uppercase tracking-wider text-espresso/60 hover:text-espresso font-medium px-2 py-1 rounded bg-[#FAF7F2]"
+            className="text-xs uppercase tracking-wider text-[#6B6B66] hover:text-[#DD592A] font-bold px-2.5 py-1 rounded-md bg-[#FDF1EB]"
           >
             Esc
           </button>
@@ -74,8 +74,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         <div className="overflow-y-auto p-4 sm:p-6 space-y-4">
           {query.trim() === "" ? (
             <div>
-              <p className="text-xs font-semibold tracking-wider text-espresso/50 uppercase mb-3">
-                Trending Searches
+              <p className="text-xs font-bold tracking-wider text-[#DD592A] uppercase mb-3">
+                🔥 Trending Searches
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -90,7 +90,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   <button
                     key={term}
                     onClick={() => setQuery(term)}
-                    className="text-xs px-3 py-1.5 rounded-full bg-white border border-espresso/10 hover:border-espresso/40 text-espresso transition-colors"
+                    className="text-xs px-3.5 py-1.5 rounded-full bg-white border border-[#F2D8CB] hover:border-[#DD592A] hover:text-[#DD592A] text-espresso font-semibold transition-all shadow-sm"
                   >
                     {term}
                   </button>

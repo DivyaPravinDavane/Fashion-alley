@@ -24,18 +24,18 @@ export default function AnnouncementBar() {
   };
 
   return (
-    <div className="bg-[#F5ECE3] text-espresso border-b border-[#EADAC9] text-[11px] sm:text-xs py-1.5 px-3 tracking-wide">
+    <div className="bg-[#DD592A] text-white text-[11px] sm:text-xs py-2 px-3 tracking-wider font-semibold uppercase shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <button
           onClick={handlePrev}
           aria-label="Previous announcement"
-          className="text-espresso/60 hover:text-espresso transition-colors p-1"
+          className="text-white/80 hover:text-white transition-colors p-1"
         >
           <ChevronLeft className="w-3.5 h-3.5" />
         </button>
 
-        <div className="text-center font-medium truncate px-2">
-          <Link href="/shop" className="hover:underline transition-all">
+        <div className="text-center font-bold truncate px-2 tracking-wide">
+          <Link href="/shop" className="hover:opacity-90 transition-opacity">
             {ANNOUNCEMENT_MESSAGES[index]}
           </Link>
         </div>
@@ -43,7 +43,7 @@ export default function AnnouncementBar() {
         <button
           onClick={handleNext}
           aria-label="Next announcement"
-          className="text-espresso/60 hover:text-espresso transition-colors p-1"
+          className="text-white/80 hover:text-white transition-colors p-1"
         >
           <ChevronRight className="w-3.5 h-3.5" />
         </button>
