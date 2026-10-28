@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { WishlistProvider } from "@/context/WishlistContext";
@@ -9,21 +9,14 @@ import Footer from "@/components/layout/Footer";
 import CartDrawer from "@/components/cart/CartDrawer";
 import ProductQuickView from "@/components/products/ProductQuickView";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fashionalley.co.in"),
   title: "Fashion Alley — Luxury Hair Accessories & Wholesale Boutique",
   description:
     "Discover handcrafted french hair claws, mulberry silk scrunchies, pearl hair pins, padded headbands, and wholesale hair accessories. India's premier fashion accessories boutique.",
@@ -57,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${inter.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-[#FDFBF8] text-espresso antialiased">
         <CartProvider>
           <WishlistProvider>
