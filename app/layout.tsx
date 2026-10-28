@@ -41,6 +41,14 @@ export const metadata: Metadata = {
     description: "Premium hair accessories boutique and wholesale supplier in India.",
     images: ["/images/banners/hero_lifestyle.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/images/fashionlogonew.jpg" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/images/fashionlogonew.jpg",
+    apple: "/images/fashionlogonew.jpg",
+  },
 };
 
 export default function RootLayout({
